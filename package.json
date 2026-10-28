@@ -1,0 +1,25 @@
+{
+  "name": "bale-bot-management-platform",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A standalone, self-hosted dashboard for managing Bale bots and no-code conversation flows.",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node server.mjs",
+    "dev": "NODE_ENV=development node --watch server.mjs",
+    "test": "node --test",
+    "check": "node --check server.mjs && node --check src/app.js && node --check src/bale.js && node --check src/bot-runtime.js && node --check src/config.js && node --check src/crypto.js && node --check src/db.js && node --check src/flows.js && node --check public/app.js && node --check test/platform.test.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.2.0",
+    "dotenv": "^16.6.1",
+    "express": "^5.1.0",
+    "helmet": "^8.1.0"
+  },
+  "allowScripts": {
+    "better-sqlite3@12.11.1": true
+  }
+}
